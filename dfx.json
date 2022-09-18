@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "dfx": "0.11.2",
+  "canisters": {
+    "homework4_3_backend": {
+      "type": "motoko",
+      "main": "src/homework4_3_backend/main.mo"
+    },
+    "homework4_3_backend2": {
+      "type": "motoko",
+      "main": "src/homework4_3_backend/main.mo"
+    },
+    "homework4_3_frontend": {
+      "type": "assets",
+      "source": [
+        "src/homework4_3_frontend/assets"
+      ],
+      "dependencies": [
+        "homework4_3_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
